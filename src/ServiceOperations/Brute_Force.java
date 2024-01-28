@@ -4,10 +4,7 @@ import AlphabetOperations.AlphabetOperations;
 import Main.Main;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Brute_Force {
     public static final ArrayList<Double> letterFrequencies = new ArrayList<>(
@@ -34,7 +31,7 @@ public class Brute_Force {
             alphabetOperations.setKey(key);
             alphabetOperations.shifter();
             file.close();
-            FileInputStream fi = new FileInputStream(String.valueOf(Main.sPath));
+            FileInputStream fi = new FileInputStream(String.valueOf(Main.filePath));
             BufferedReader br = new BufferedReader(new InputStreamReader(fi));
             String readLine = br.readLine();
             while (readLine != null) {
@@ -70,7 +67,7 @@ public class Brute_Force {
     //find the key with a method of the least squares
     public int findTheKey() {
         double minimalPoints = Double.MAX_VALUE;
-        int key = 0; //key equals 1 because it`s the minimal value to shift the numbers
+        int key = 0;
         for (int i = 0; i < 26; i++) {
             double sum = 0;
             ArrayList<Double> differenceBetweenIdealAndInputFrequencies = new ArrayList<>();
@@ -105,7 +102,6 @@ public class Brute_Force {
                 }
             }
         }
-        String decryptedLine = String.valueOf(decryptedValue);
-        return decryptedLine;
+        return String.valueOf(decryptedValue);
     }
 }

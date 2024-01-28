@@ -13,10 +13,15 @@ public class InputValidator {
     }
 
     public static void validateCommand(Modes command) {
+        boolean isCommandExist = false;
         for (Modes mode : Modes.values()) {
-            if (!(mode.toString().equals(command))) {
-                throw new InvalidArgumanentException("Command is not exist.");
+            if (mode.equals(command)) {
+                isCommandExist = true;
+                break;
             }
+        }
+        if (!isCommandExist) {
+            throw new InvalidArgumanentException("Command is not exist.");
         }
     }
 

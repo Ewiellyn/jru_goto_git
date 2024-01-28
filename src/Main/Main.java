@@ -17,7 +17,9 @@ public class Main {
         InputValidator.validateCommand(command);
         filePath = args[1];
         InputValidator.validateFilePath(filePath);
-        key = Integer.valueOf(args[2]);
+        if (args.length > 2) {
+            key = Integer.valueOf(args[2]);
+        }
         try {
             FileInputStream fi = new FileInputStream(String.valueOf(filePath));
             reader = new BufferedReader(new InputStreamReader(fi));
@@ -35,6 +37,7 @@ public class Main {
                 new Brute_Force().brute_forced(reader, fileWithoutExtension(filePath) + "_BRUTE_FORCED.txt");
         }
     }
+
     public static String fileWithoutExtension(String fileName) {
         return fileName.substring(0, fileName.lastIndexOf("."));
     }

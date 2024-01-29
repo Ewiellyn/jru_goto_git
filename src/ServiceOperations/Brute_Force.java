@@ -6,6 +6,7 @@ import Main.Main;
 import java.io.*;
 import java.util.*;
 
+//Brute_Force finds the key with method of frequencies of letters in English.
 public class Brute_Force {
     public static final ArrayList<Double> letterFrequencies = new ArrayList<>(
             Arrays.asList(8.1, 1.5, 2.8, 4.3, 13.0, 2.2, 2.0, 6.1, 7.0, 0.15, 0.77, 7.0, 2.4,

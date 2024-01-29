@@ -42,7 +42,6 @@ public class Encryptor {
                 }
             }
         }
-        String encryptedLine = String.valueOf(encryptedValue);
-        return encryptedLine;
+        return String.valueOf(encryptedValue);
     }
 }

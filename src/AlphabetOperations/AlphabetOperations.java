@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 //AlphabetOperations class is for the shifting the alphabet into the steps amounted as variable "key"
-//"key" can be both positive or negative. If key is negative then alphabet moved to the left and vise versa
+//"key" can be both positive or negative. If key is negative then alphabet moved to the left and vise versa.
 public class AlphabetOperations {
     public ArrayList<Character> ALPHABET;
     public ArrayList<Character> shiftedAlphabet;

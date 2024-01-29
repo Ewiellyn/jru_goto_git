@@ -37,7 +37,7 @@ public class Main {
                 new Brute_Force().brute_forced(reader, fileWithoutExtension(filePath) + "_BRUTE_FORCED.txt");
         }
     }
-
+    //this method is for getting the file name without its extension
     public static String fileWithoutExtension(String fileName) {
         return fileName.substring(0, fileName.lastIndexOf("."));
     }

@@ -4,7 +4,8 @@ import Exceptions.InvalidArgumanentException;
 import Modes.Modes;
 
 import java.nio.file.*;
-
+//Class InputValidator is created for validation of input information of user.
+//It checks the number of arguments entered, check whether the command and path are correct.
 public class InputValidator {
     public static void validateInput(String[] args) {
         if (args.length > 3 || args.length < 2) {

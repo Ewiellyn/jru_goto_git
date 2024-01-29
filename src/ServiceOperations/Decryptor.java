@@ -4,6 +4,7 @@ import AlphabetOperations.AlphabetOperations;
 
 import java.io.*;
 
+
 public class Decryptor {
     private AlphabetOperations alphabetOperations = new AlphabetOperations();
 
@@ -42,8 +43,7 @@ public class Decryptor {
                 }
             }
         }
-        String decryptedLine = String.valueOf(decryptedValue);
-        return decryptedLine;
+        return String.valueOf(decryptedValue);
     }
 
 }
